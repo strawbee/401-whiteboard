@@ -1,0 +1,14 @@
+{
+  "name": "02-two-highest-of-array",
+  "version": "1.0.0",
+  "description": "Lab 02",
+  "main": "solution.js",
+  "scripts": {
+    "test": "jest --verbose --coverage"
+  },
+  "author": "Joy Hou",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^22.1.1"
+  }
+}
