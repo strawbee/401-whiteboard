@@ -8,6 +8,7 @@ describe('twoHighest', () => {
         expect(solution.twoHighest([4.03, 3.4, 4.2, 4])).toBe('4.2, 4.03');
         expect(solution.twoHighest([0, 'cat', 3])).toBe('3, 0');
         expect(solution.twoHighest([-0.9, -99, -1.3, 1])).toBe('1, -0.9');
+        expect(solution.twoHighest([1, 3, 2, 3, 3])).toBe('3, 2');
         expect(solution.twoHighest([])).toBeNull();
     });
 })
