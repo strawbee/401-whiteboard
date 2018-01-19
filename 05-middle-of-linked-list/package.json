@@ -1,0 +1,16 @@
+{
+  "name": "05-middle-of-linked-list",
+  "version": "1.0.0",
+  "description": "Find the middle node of a linked list.",
+  "main": "solution.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "lint": "eslint ."
+  },
+  "author": "Joy Hou",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.15.0",
+    "jest": "^22.1.4"
+  }
+}
