@@ -1,7 +1,7 @@
 'use strict';
 
 require('jest');
-const solution = require('../solution');
+const solution = require('../lib/solution');
 
 describe('Loop Function', () => {
     it('should return null if n is less than 1', () => {
