@@ -1,0 +1,16 @@
+{
+  "name": "06-loop-callback-count-times",
+  "version": "1.0.0",
+  "description": "Recursive function loop(count, callback) that calls the callback count times",
+  "main": "solution.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "lint": "eslint ."
+  },
+  "author": "Joy Hou",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "jest": "^22.1.4"
+  }
+}
