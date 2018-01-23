@@ -1,5 +1,6 @@
 'use strict';
 
+// Big O Notation: O(n) as it iterates through the entire list once.
 exports.isCircular = list => {
     if (!list || typeof list !== 'object' || Array.isArray(list)) return null;
     let current = Object.assign({}, list);
