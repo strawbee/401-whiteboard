@@ -1,0 +1,16 @@
+{
+  "name": "07-is-list-circular",
+  "version": "1.0.0",
+  "description": "Write a function that tests whether a singly linked list whose constructor only has this.head is circular.",
+  "main": "solution.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "lint": "eslint ."
+  },
+  "author": "Joy Hou",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "jest": "^22.1.4"
+  }
+}
