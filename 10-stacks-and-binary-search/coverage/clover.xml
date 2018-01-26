@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1517007525141" clover="3.2.0">
+  <project timestamp="1517007525141" name="All files">
+    <metrics statements="19" coveredstatements="19" conditionals="24" coveredconditionals="24" methods="2" coveredmethods="2" elements="45" coveredelements="45" complexity="0" loc="19" ncloc="19" packages="1" files="1" classes="1">
+      <file name="solution.js" path="/Users/yuejiao/Projects/401/401-whiteboard/10-stacks-and-binary-search/solution.js">
+        <metrics statements="19" coveredstatements="19" conditionals="24" coveredconditionals="24" methods="2" coveredmethods="2"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="47" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="9" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="12" count="38" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="17" count="5" type="cond" truecount="4" falsecount="0"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="18" type="cond" truecount="4" falsecount="0"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="24" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="10" type="stmt"/>
+        <line num="29" count="6" type="cond" truecount="2" falsecount="0"/>
+      </file>
+    </metrics>
+  </project>
+</coverage>
