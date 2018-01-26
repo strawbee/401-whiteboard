@@ -1,0 +1,16 @@
+{
+  "name": "10-stacks-and-binary-search",
+  "version": "1.0.0",
+  "description": "1) Write a function that checks that a string has correct beginning and end braces using a stack. 2) Write a function takes in an array and an immutable value n. Return the index of the value n in the array. Implement a binary search.",
+  "main": "solution.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "lint": "eslint ."
+  },
+  "author": "Joy Hou",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "jest": "^22.1.4"
+  }
+}
