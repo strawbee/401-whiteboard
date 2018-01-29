@@ -1,0 +1,16 @@
+{
+  "name": "11-find-missing-number-in-array",
+  "version": "1.0.0",
+  "description": "Find the missing number in an unsorted array of numbers between 1-100",
+  "main": "solution.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "lint": "eslint ."
+  },
+  "author": "Joy Hou",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "jest": "^22.1.4"
+  }
+}
