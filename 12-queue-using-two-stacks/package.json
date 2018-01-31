@@ -1,0 +1,16 @@
+{
+  "name": "12-queue-using-two-stacks",
+  "version": "1.0.0",
+  "description": "Implement a queue using only two stacks.",
+  "main": "solution.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "lint": "eslint ."
+  },
+  "author": "Joy Hou",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "jest": "^22.1.4"
+  }
+}
