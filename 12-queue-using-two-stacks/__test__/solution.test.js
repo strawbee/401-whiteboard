@@ -11,10 +11,6 @@ describe('Queue Data Structure Module', () => {
             expect(queue).toBeInstanceOf(Queue);
         });
 
-        it('should have a default val of null assigned to the top property', () => {
-            expect(queue.stack.bottom).toBeNull();
-        });
-
         it('should have a default val of 0 assigned to the size property', () => {
             expect(queue.stack.size).toEqual(0);
         });
@@ -50,18 +46,20 @@ describe('Queue Data Structure Module', () => {
     });
 
     describe('#Dequeue', () => {
-        let queue.stack = new Queue();
+        let queue = new Queue();
 
-        it('should remove the bottom most node from the queue.stack', () => {
+        it('should remove the bottom most node from the queue', () => {
             queue.enqueue(1);
-            expect(queue.stack.bottom.value).toEqual(1);
+            queue.enqueue(2);
             expect(queue.dequeue().value).toEqual(1);
         });
 
         it('should throw an error when the queue.stack size is 0', () => {
+            queue.dequeue();
             expect(() => {
                 queue.dequeue();
             }).toThrow();
         });
+
     });
 });
