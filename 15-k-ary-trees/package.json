@@ -1,0 +1,15 @@
+{
+  "name": "15-k-ary-trees",
+  "version": "1.0.0",
+  "description": "Write a function that accepts the root of a tree as its argument and returns an array of nodes, if any, which have no children.",
+  "main": "solution.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "lint": "eslint ."
+  },
+  "author": "Joy Hou",
+  "license": "MIT"
+}
