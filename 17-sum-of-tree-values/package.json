@@ -1,0 +1,16 @@
+{
+  "name": "17-sum-of-tree-values",
+  "version": "1.0.0",
+  "description": "Write a function that accepts a tree and returns the sum of its nodes' values.",
+  "main": "solution.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "lint": "eslint ."
+  },
+  "author": "Joy Hou",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.17.0",
+    "jest": "^22.1.4"
+  }
+}
