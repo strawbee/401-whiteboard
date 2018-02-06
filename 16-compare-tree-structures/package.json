@@ -1,0 +1,15 @@
+{
+  "name": "16-compare-tree-structures",
+  "version": "1.0.0",
+  "description": "Write a function that accepts two k-ary trees as arguments, and returns a True or False if the structure of the trees (exclusive of their node values) is identical",
+  "main": "solution.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "lint": "eslint ."
+  },
+  "author": "Joy Hou",
+  "license": "MIT"
+}
