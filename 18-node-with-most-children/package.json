@@ -1,0 +1,16 @@
+{
+  "name": "18-node-with-most-children",
+  "version": "1.0.0",
+  "description": "Write a function that takes in a k-ary tree and returns the first node with the most number of children.",
+  "main": "solution.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "lint": "eslint ."
+  },
+  "author": "Joy Hou",
+  "license": "MIT"
+}
