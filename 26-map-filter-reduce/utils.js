@@ -5,7 +5,7 @@ const utils = module.exports = {};
 utils.map = (arr, cb) => {
     if (!Array.isArray(arr) || typeof cb !== 'function') return 'Invalid argument.';
     let result = [];
-    for (let i in arr) result.push(cb(arr[i]))
+    for (let i in arr) result.push(cb(arr[i]));
     return result;
 };
 
@@ -25,6 +25,6 @@ utils.reduce = (arr, cb, initialValue) => {
         initialValue = arr[0];
         index = 1;
     }
-    for (let i = index; i < arr.length; i++) initialValue = cb(initialValue, arr[i])
+    for (let i = index; i < arr.length; i++) initialValue = cb(initialValue, arr[i]);
     return initialValue;
 };
