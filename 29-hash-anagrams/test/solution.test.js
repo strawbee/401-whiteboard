@@ -16,15 +16,15 @@ describe('#sortAnagrams', () => {
         expect(typeof solution.sortAnagrams('str')).toBe('object');
     });
 
-    it('should return an error if taking in an empty string') {
+    it('should return an error if taking in an empty string', () => {
         expect(solution.sortAnagrams([''])).toBe('Invalid argument.');
-    }
+    });
 
     it('should have the correct output', () => {
         let str = 'acre race care act cat tac';
         let result = {
             'acer': ['acre', 'race', 'care'], 
-            'act': ['act', 'cat', 'tac']
+            'act': ['act', 'cat', 'tac'],
         };
 
         expect(solution.sortAnagrams(str)).toMatchObject(result);
