@@ -1,7 +1,26 @@
 {
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true,
+    "jest": true,
+    "es6": true
+  },
+  "globals": {
+    "err": true,
+    "req": true,
+    "res": true,
+    "next": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "sourceType": "module"
+  },
   "rules": {
-    "react/prop-types": [
-      0
+    "no-console": "off",
+    "indent": [
+      "error",
+      4
     ],
     "quotes": [
       "error",
@@ -14,39 +33,13 @@
       "error",
       "always-multiline"
     ],
-    "no-console": "off",
-    "no-unused-vars": "off",
-    "indent": [
-      "error",
-      2
-    ],
     "semi": [
       "error",
       "always"
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
     ]
-  },
-  "plugins": [
-    "react"
-  ],
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
-      "module": true,
-      "jsx": true
-    }
-  },
-  "env": {
-    "es6": true,
-    "node": true,
-    "jest": true,
-    "browser": true
-  },
-  "globals": {
-    "__API_URI__": false,
-    "__DEBUG__": false
-  },
-  "extends": [
-    "eslint:recommended"
-  ]
+  }
 }
