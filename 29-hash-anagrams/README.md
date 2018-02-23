@@ -16,3 +16,11 @@ Returns:
     'act': ['act', 'cat', 'tac']
 };
 ```
+
+## Update
+Specs have been ammended to require an array input and output. Array output of adjacent anagrams should be sorted. Code has been updated accordingly.
+
+```
+sortAnagrams(['acre', 'act', 'race', 'cat', 'tac', 'care'])
+=> ['acre', 'care', 'race', 'act', 'cat', 'tac']
+```
