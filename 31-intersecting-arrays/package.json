@@ -1,0 +1,16 @@
+{
+  "name": "04-intersecting-arrays",
+  "version": "1.0.0",
+  "description": "Intersect two arrays",
+  "main": "solution.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "lint": "eslint ."
+  },
+  "author": "Joy Hou",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.15.0",
+    "jest": "^22.1.3"
+  }
+}
