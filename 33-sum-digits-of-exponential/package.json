@@ -1,0 +1,19 @@
+{
+  "name": "33-sum-digits-of-exponential",
+  "version": "1.0.0",
+  "description": "",
+  "main": "solution.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest -i --coverage",
+    "lint": "eslint ."
+  },
+  "author": "Joy Hou",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.18.1",
+    "jest": "^22.4.2"
+  }
+}
