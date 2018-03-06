@@ -8,7 +8,7 @@ exports.compare = (tree1, tree2) => {
   if (!tree1.root || !tree2.root) return false;
   let q1 = [tree1.root], q2 = [tree2.root], str1 = '', str2 = '';
   while (q1.length || q2.length) {
-    if (q1.length !== q2.length && str1 !== str2) return false;
+    if (q1.length !== q2.length || str1 !== str2) return false;
     let node1 = q1.shift(), node2 = q2.shift();
     if (node1.left) {
       q1.push(node1.left);
