@@ -21,11 +21,36 @@ describe('#Compare', () => {
         expect(typeof solution.compare(tree1, tree2)).toBe('boolean');
     });
 
-    it('should return the correct output for empty BSTs', () => {
+
+
+    it('should return the correct output for empty BSTs or BSTs with only a root', () => {
         expect(solution.compare(tree1, tree2)).toBe(true);
 
         tree1.insert(10);
+
         expect(solution.compare(tree1, tree2)).toBe(false);
+
+        tree2.insert(10);
+
+        expect(solution.compare(tree1, tree2)).toBe(true);        
     });
 
+    it('should return the correct output', () => {
+        tree1.insert(4);
+        tree1.insert(16);
+        tree1.insert(11);
+        tree1.insert(12);
+        tree1.insert(8);
+
+        tree2.insert(4);
+        tree2.insert(16);
+        tree2.insert(11);
+        tree2.insert(12);
+
+        expect(solution.compare(tree1, tree2)).toBe(false);
+
+        tree2.insert(9);
+        
+        expect(solution.compare(tree1, tree2)).toBe(true);
+    });
 });

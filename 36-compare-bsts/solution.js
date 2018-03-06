@@ -4,20 +4,16 @@ const BST = require('./lib/bst');
 
 exports.compare = (tree1, tree2) => {
     if (!(tree1 instanceof BST) || !(tree2 instanceof BST)) return 'Arguments must be BSTs.';
-    const _traverse = (node, str) => {
-        if (node.left) {
-            str += '0';
-            _traverse(node.left);
-        }
-        str += '1';
-        if (node.right) {
-            str += '2';
-            _traverse(node.right);
-        }
+    if (!tree1.root && !tree2.root) return true;
+    if (!tree1.root || !tree2.root) return false;
+    let q1 = [tree1.root], q2 = [tree2.root];
+    while (q1.length || q2.length) {
+        if (q1.length !== q2.length) return false;
+        let node1 = q1.shift(), node2 = q2.shift();
+        if (node1.left) q1.push(node1.left);
+        if (node1.right) q1.push(node1.right);
+        if (node2.left) q2.push(node2.left);
+        if (node2.right) q2.push(node2.right);
     }
-    let one = '', two = '';
-    if (tree1.root) _traverse(tree1.root, one);
-    if (tree2.root) _traverse(tree2.root, two);
-    console.log(one, two);
-    return one === two;
+    return true;
 };

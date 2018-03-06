@@ -74,37 +74,4 @@ module.exports = class BST {
     };
     return _maxHeight(this.root) - _minHeight(this.root) <= 1;
   }
-
-  isMirrored() {
-    if (!this.root) return null;
-    let left = '', right = '';
-
-    const _leftTraversal = node => {
-      if (node.left) {
-        left += '0';
-        _leftTraversal(node.left);
-      }
-      left += '1';
-      if (node.right) {
-        left += '2';
-        _leftTraversal(node.right);
-      }
-    };
-
-    const _rightTraversal = node => {
-      if (node.right) {
-        right += '0';
-        _rightTraversal(node.right);
-      }
-      right += '1';
-      if (node.left) {
-        right += '2';
-        _rightTraversal(node.left);
-      }
-    };
-
-    if (this.root.left) _leftTraversal(this.root.left);
-    if (this.root.right) _rightTraversal(this.root.right);
-    return left === right;
-  }
 };

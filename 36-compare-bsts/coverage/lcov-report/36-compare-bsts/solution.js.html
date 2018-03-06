@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>13/26</span>
+        <span class='fraction'>24/24</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>8/16</span>
+        <span class='fraction'>24/24</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">66.67% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/3</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">45.45% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/22</span>
+        <span class='fraction'>14/14</span>
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -61,100 +61,49 @@
 16
 17
 18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+19</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
 &nbsp;
 const BST = require('./lib/bst');
 &nbsp;
 exports.compare = (tree1, tree2) =&gt; {
     if (!(tree1 instanceof BST) || !(tree2 instanceof BST)) return 'Arguments must be BSTs.';
-    let one = '', two = '';
-    if (tree1.root) _traverseOne(tree1.root);
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (tree2.root) <span class="cstat-no" title="statement not covered" >_traverseTwo(tree2.root);</span>
-    console.log(one, two);
-    return one === two;
-};
-&nbsp;
-function _traverseOne(node) {
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (node.left) {
-<span class="cstat-no" title="statement not covered" >        one += '0';</span>
-<span class="cstat-no" title="statement not covered" >        _traverseOne(node.left);</span>
+    if (!tree1.root &amp;&amp; !tree2.root) return true;
+    if (!tree1.root || !tree2.root) return false;
+    let q1 = [tree1.root], q2 = [tree2.root];
+    while (q1.length || q2.length) {
+        if (q1.length !== q2.length) return false;
+        let node1 = q1.shift(), node2 = q2.shift();
+        if (node1.left) q1.push(node1.left);
+        if (node1.right) q1.push(node1.right);
+        if (node2.left) q2.push(node2.left);
+        if (node2.right) q2.push(node2.right);
     }
-    one += '1';
-<span class="cstat-no" title="statement not covered" >    if (node.right) {</span>
-<span class="cstat-no" title="statement not covered" >        one += '2';</span>
-<span class="cstat-no" title="statement not covered" >        _traverseOne(node.right);</span>
-    }
-}
-&nbsp;
-function <span class="fstat-no" title="function not covered" >_traverseTwo(</span>node) {
-<span class="cstat-no" title="statement not covered" >    if (node.left) {</span>
-<span class="cstat-no" title="statement not covered" >        two += '0';</span>
-<span class="cstat-no" title="statement not covered" >        _traverseTwo(node.left);</span>
-    }
-<span class="cstat-no" title="statement not covered" >    two += '1';</span>
-<span class="cstat-no" title="statement not covered" >    if (node.right) {</span>
-<span class="cstat-no" title="statement not covered" >        two += '2';</span>
-<span class="cstat-no" title="statement not covered" >        _traverseTwo(node.right);</span>
-    }
-}</pre></td></tr>
+    return true;
+};</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Mar 05 2018 23:48:51 GMT-0800 (PST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Mar 06 2018 06:53:14 GMT-0800 (PST)
 </div>
 </div>
 <script src="../prettify.js"></script>
