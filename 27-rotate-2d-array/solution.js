@@ -21,4 +21,4 @@ exports.rotate = arr => {
         }
     }
     return result;
-}
+};
