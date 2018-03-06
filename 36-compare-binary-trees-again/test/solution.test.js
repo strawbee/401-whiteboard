@@ -49,7 +49,7 @@ describe('#Compare', () => {
 
     expect(solution.compare(tree1, tree2)).toBe(false);
 
-    tree2.insert(9);
+    tree2.insert(13);
         
     expect(solution.compare(tree1, tree2)).toBe(true);
   });

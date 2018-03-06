@@ -27,7 +27,7 @@ module.exports = class BST {
   }
 
   remove(val, node = this.root, parent = null) {
-    if (!node) return null;
+    if (!val || !node) return null;
 
     let prnt = null;
     const _deleteMin = (nd) => {
